@@ -16,8 +16,9 @@ with open ('text.txt',encoding='utf-8') as file:
 
     m_use=[slova for slova in re.split(' ', text )if len(slova)>3]
 
-    links=re.findall('\w+\.+\w+[.\/+\w+]+\w?', text)
+    pat = re.compile('\w+\.+\w+[.\/+\w+]+\w?')
+    links = re.findall(pat, text)
 
-    ch_l=re.sub('\w+\.+\w+[.\/+\w+]+\w?','ссылка будет доступна после регистрации',text)
+    ch_l = re.sub(pat, 'ссылка будет доступна после регистрации', text)
 
-print (ch_l)
+print(text)
