@@ -14,11 +14,16 @@ with open ('text.txt',encoding='utf-8') as file:
 
     dote=re.split('\.', text)
 
-    m_use=[slova for slova in re.split(' ', text )if len(slova)>3]
+    m_use=collections.Counter([slova for slova in re.split(' ', text )if len(slova)>3]).most_common(1)
 
     pat = re.compile('\w+\.+\w+[.\/+\w+]+\w?')
+
     links = re.findall(pat, text)
+
+    m_domain=" ".join(links)
+    m_domain=(re.split('\.',re.sub('\/+\w+',' ',m_domain)))
+    m_domain=collections.Counter([slova for slova in m_domain if len(slova)>3]).most_common(1)
 
     ch_l = re.sub(pat, 'ссылка будет доступна после регистрации', text)
 
-print(text)
+print(m_domain)
