@@ -13,4 +13,5 @@ soup=BS(s,'html.parser')
 
 li=soup.find_all('span')
 for i in li:
-    print (i.string)
+    print(i.string)
+    break
