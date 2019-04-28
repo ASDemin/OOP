@@ -1,0 +1,1 @@
+try{if(!/(^|\.)((my\.com)|(mail\.ru))$/.test(window.location.hostname))document.cookie="mr1lad=5cc5f8104950764-21-21-; expires=Sun, 28 Apr 2019 20:09:09 GMT; path=/; domain=." + window.location.hostname;document.cookie="mr1lext=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=." + window.location.hostname;}catch(e){};
