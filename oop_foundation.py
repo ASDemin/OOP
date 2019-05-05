@@ -10,17 +10,19 @@
 import re
 
 class Word:
-    text = ' '
-    part_of_speech = ' '
+    text = 'gap'
+    part_of_speech = 'noun'
+    __gh = 1 #cклонение
 
     def __init__(self,text,part_of_speech):
         self.text = text
         self.part_of_speech = part_of_speech
 
-class Sentence:
-    content = [i for i in range(1, (len(re.findall('\w+', sentence))+1))]
 
-    def show(self,**sentence):
+#class Sentence:
+    #content = [objects for objects in Word]
+
+    def show(self,**a):
         for key, value in sentence.items():
             key=list.append(key.text)
             value=list.append(value.text)
