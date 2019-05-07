@@ -10,34 +10,30 @@
 import re
 
 class Word:
-    text = 'gap'
-    part_of_speech = 'noun'
-    __gh = 1 #cклонение
 
     def __init__(self,text,part_of_speech):
         self.text = text
         self.part_of_speech = part_of_speech
 
 
-#class Sentence:
-    #content = [objects for objects in Word]
+class Sentence:
 
-    def show(self,**a):
-        for key, value in sentence.items():
-            key=list.append(key.text)
-            value=list.append(value.text)
-        sentence = " ".join(list)
-        print(sentence)
+    def __init__(self, contetnt=[], w_list=[]):
+        self.content =contetnt
+        self.w_list=w_list
 
-    def show_parts(self,**parts):
-        for key, value in parts.items():
-            key = list.append(key.part_of_speech)
-            value = list.append(key.part_of_speech)
-        print (list(set1))
+    def show(self):
+        result =[self.w_list[i].text for i in self.content]
+        str_result = " ".join(result)
+        return str_result
 
-f = Word ('Hello','noun')
-s = Word ('my','pronoun')
-t = Word('is', 'preposition')
-f=Word('Alex','noun')
-f2=Word('!','sign')
+    def show_parts(self):
+        result =[self.w_list[i].part_of_speech for i in self.content]
+        result=set(result)
+        str_result='In the sentence use {}.'.format(','.join(result))
+        return str_result
 
+
+obj=Sentence([0,1,2],[Word('Hello','noun'),Word('my','noun'), Word('world','noun')])
+print(obj.show())
+print (obj.show_parts())
