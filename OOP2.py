@@ -8,7 +8,7 @@ import re
 
 class Word:
 
-    def __init__(self,text,part_of_speech,g_param):
+    def __init__(self,text,g_param,part_of_speech):
         self.text = text
         self.part_of_speech = part_of_speech
         self.__g_param=g_param
